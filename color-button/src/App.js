@@ -18,6 +18,7 @@ function App() {
       </button>
       <input
         type="checkbox"
+        aria-checked={isButtonDisabled}
         checked={isButtonDisabled}
         onChange={() => setIsButtonDisabled(!isButtonDisabled)}
       />
