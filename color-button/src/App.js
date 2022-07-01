@@ -8,7 +8,8 @@ function App() {
   const [isButtonRed, setIsButtonRed] = useState(true);
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
-  const getColor = (isRed = true) => (isRed ? "red" : "blue");
+  const getColor = (isRed = true) =>
+    isRed ? "MediumVioletRed" : "MidnightBlue";
 
   const backgroundColor = useMemo(
     () => (isButtonDisabled ? "grey" : getColor(isButtonRed)),
@@ -19,10 +20,10 @@ function App() {
     <div>
       <button
         disabled={isButtonDisabled}
-        style={{ backgroundColor }}
+        style={{ backgroundColor, color: "white" }}
         onClick={() => setIsButtonRed(!isButtonRed)}
       >
-        {`Change to ${getColor(!isButtonRed)}`}
+        {`Change to ${replaceCamelCaseWithSpace(getColor(!isButtonRed))}`}
       </button>
 
       <input
