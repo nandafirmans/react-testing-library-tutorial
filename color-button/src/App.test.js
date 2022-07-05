@@ -19,7 +19,7 @@ test("button has correct initial color", () => {
   expect(colorButtons).toHaveStyle({ backgroundColor: "MidnightBlue" });
 
   // expect text content change to be 'Change to Medium Violet Red'
-  expect(colorButtons.textContent).toBe("Change to Medium Violet Red");
+  expect(colorButtons.textContent).toHaveTextContent("Change to Medium Violet Red");
 });
 
 test("initial conditions", () => {
